@@ -15,4 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_x2.mk
+    $(LOCAL_DIR)/derp_x2.mk
+
+COMMON_LUNCH_CHOICES := \
+    derp_x2-userdebug \
+    derp_x2-user \
+    derp_x2-eng
