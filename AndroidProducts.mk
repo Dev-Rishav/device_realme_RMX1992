@@ -15,4 +15,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_x2.mk
+    $(LOCAL_DIR)/legion_x2.mk
+
+COMMON_LUNCH_CHOICES := \
+    legion_x2-userdebug
