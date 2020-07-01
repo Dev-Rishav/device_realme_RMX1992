@@ -9,6 +9,17 @@ $(call inherit-product, device/realme/x2/device.mk)
 # Inherit some common Legion stuff.
 $(call inherit-product, vendor/legion/config/common_full_phone.mk)
 
+#Boot RES
+TARGET_BOOT_ANIMATION_RES := 1080
+
+ifeq ($(CURRENT_BUILD_TYPE), gapps)
+# Use Gapps
+TARGET_SHIPS_SEPERATE_GAPPS_BUILD := true
+WITH_GAPPS := true
+TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
+endif
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := legion_x2
 PRODUCT_DEVICE := x2
