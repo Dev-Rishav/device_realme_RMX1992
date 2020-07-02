@@ -447,3 +447,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+#FOD Animations
+EXTRA_FOD_ANIMATIONS=true
