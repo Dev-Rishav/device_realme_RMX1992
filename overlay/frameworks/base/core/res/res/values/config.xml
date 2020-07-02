@@ -1102,13 +1102,6 @@
 
     <!-- Whether device supports double tap to wake -->
     <bool name="config_supportDoubleTapWake">true</bool>
-    <bool name="config_cleanupUnusedFingerprints">false</bool>
-    
-    <!-- Whether to show a custom view for FOD -->
-    <bool name="config_needCustomFODView">true</bool>
-
-    <!-- Whether device has VOOC charging support -->
-    <bool name="config_hasVoocCharger">true</bool>    
 
     <!-- Display mode remapping table.
          If the mode names returned by the backend do not match
@@ -1128,15 +1121,6 @@
 
     <!-- Should we filter any display modes which are unampped? -->
     <bool name="config_filterDisplayModes">true</bool>
-
-    <!-- Turn on LiveDisplay auto mode by default -->
-    <integer name="config_defaultLiveDisplayMode">2</integer>
-   
-    <!-- Enable live display -->
-    <bool name="config_liveDisplayAvailable">true</bool>
-
-    <!-- Use live display for temperature control-->
-    <bool name="config_nightDisplayAvailable">false</bool>
 
     <!-- Default value for proximity check on screen wake
      NOTE ! - Enable for devices that have a fast response proximity sensor (ideally < 300ms)-->

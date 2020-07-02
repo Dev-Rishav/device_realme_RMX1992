@@ -17,7 +17,10 @@
     <!-- Whether SystemUI ignores notch -->
     <bool name="hide_view_behind_notch">true</bool>
 
-    <!-- Burn in protection -->
-    <bool name="config_statusBarBurnInProtection">true</bool>
-    <integer name="config_shift_interval">30</integer>
+        <!-- Max visible notification icons -->
+    <integer name="config_maxVisibleNotificationIcons">7</integer>
+    <integer name="config_maxVisibleNotificationIconsWhenDark">8</integer>
+
+        <!-- Allow devices override audio panel location to the left side -->
+    <bool name="config_audioPanelOnLeftSide">true</bool>
 </resources>
