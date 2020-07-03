@@ -20,11 +20,14 @@
 <!-- These resources are around just to allow their values to be customized
      for different hardware and product builds.  Do not translate. -->
 
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
         <!-- Whether device has screen with higher aspect ratio -->
     <bool name="config_haveHigherAspectRatioScreen">true</bool>
 
-        <!-- Whether to show a custom view for FOD -->
+    <!-- Whether device ignores the RSSNR signal implementation -->
+    <bool name="config_ignoreRssnrSignalLevel">true</bool>
+
+    <!-- Whether to show a custom view for FOD -->
     <bool name="config_needCustomFODView">true</bool>
 
     <!-- Whether to cleanup fingerprints upon connection to the daemon and when user switches -->
