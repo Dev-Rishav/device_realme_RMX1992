@@ -15,7 +15,8 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.lineageos.settings.device;
+
+package org.aosip.settings.device;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -23,11 +24,11 @@ import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceManager;
 
-import org.lineageos.settings.device.DeviceSettings;
+import org.aosip.settings.device.DeviceSettings;
 
-public class DCModeSwitch implements OnPreferenceChangeListener {
+public class HBMModeSwitch implements OnPreferenceChangeListener {
 
-    private static final String FILE = "/sys/kernel/oppo_display/dimlayer_bl_en";
+    private static final String FILE = "/sys/kernel/oppo_display/hbm";
 
     public static String getFile() {
         if (Utils.fileWritable(FILE)) {

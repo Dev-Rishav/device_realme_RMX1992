@@ -16,7 +16,7 @@
 *
 */
 
-package org.lineageos.settings.device;
+package org.aosip.settings.device;
 
 import android.annotation.TargetApi;
 import android.content.Intent;
@@ -25,7 +25,7 @@ import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
 import androidx.preference.PreferenceManager;
 
-import org.lineageos.settings.device.DeviceSettings;
+import org.aosip.settings.device.DeviceSettings;
 
 @TargetApi(24)
 public class DCModeTileService extends TileService {

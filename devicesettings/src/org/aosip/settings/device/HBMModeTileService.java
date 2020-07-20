@@ -16,7 +16,7 @@
 *
 */
 
-package org.lineageos.settings.device;
+package org.aosip.settings.device;
 
 import android.annotation.TargetApi;
 import android.content.Intent;
@@ -25,10 +25,10 @@ import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
 import androidx.preference.PreferenceManager;
 
-import org.lineageos.settings.device.DeviceSettings;
+import org.aosip.settings.device.DeviceSettings;
 
 @TargetApi(24)
-public class OtgToggleService extends TileService {
+public class HBMModeTileService extends TileService {
     private boolean enabled = false;
 
     @Override
@@ -50,10 +50,9 @@ public class OtgToggleService extends TileService {
     public void onStartListening() {
         super.onStartListening();
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-        enabled = OTGModeSwitch.isCurrentlyEnabled(this);
+        enabled = HBMModeSwitch.isCurrentlyEnabled(this);
         getQsTile().setState(enabled ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
         getQsTile().updateTile();
-
     }
 
     @Override
@@ -65,9 +64,10 @@ public class OtgToggleService extends TileService {
     public void onClick() {
         super.onClick();
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-        enabled = OTGModeSwitch.isCurrentlyEnabled(this);
-        Utils.writeValue(OTGModeSwitch.getFile(), enabled ? "0" : "1");
-        sharedPrefs.edit().putBoolean(DeviceSettings.KEY_OTG_SWITCH, enabled ? false : true).commit();
+        enabled = HBMModeSwitch.isCurrentlyEnabled(this);
+        Utils.writeValue(HBMModeSwitch.getFile(), enabled ? "0" : "1");
+        sharedPrefs.edit().putBoolean(DeviceSettings.KEY_HBM_SWITCH, enabled ? false : true).commit();
+        //getQsTile().setLabel(enabled ? "HBM off" : "HBM On");
         getQsTile().setState(enabled ? Tile.STATE_INACTIVE : Tile.STATE_ACTIVE);
         getQsTile().updateTile();
     }

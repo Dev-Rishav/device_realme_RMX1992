@@ -15,21 +15,19 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.lineageos.settings.device;
+package org.aosip.settings.device;
 
-import android.util.Log;
 import android.content.Context;
 import android.content.SharedPreferences;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceManager;
 
-import org.lineageos.settings.device.DeviceSettings;
+import org.aosip.settings.device.DeviceSettings;
 
-public class GameModeSwitch implements OnPreferenceChangeListener {
+public class SRGBModeSwitch implements OnPreferenceChangeListener {
 
-    private static final String FILE = "/proc/touchpanel/game_switch_enable";
-    private static final String TAG = Utils.class.getSimpleName();
+    private static final String FILE = "/sys/kernel/oppo_display/seed";
 
     public static String getFile() {
         if (Utils.fileWritable(FILE)) {
@@ -50,7 +48,6 @@ public class GameModeSwitch implements OnPreferenceChangeListener {
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         Boolean enabled = (Boolean) newValue;
         Utils.writeValue(getFile(), enabled ? "1" : "0");
-        Log.e(TAG, "game mode set to " + enabled);
         return true;
     }
 }

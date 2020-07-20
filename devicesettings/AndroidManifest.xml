@@ -14,7 +14,7 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           android:sharedUserId="android.uid.system"
-          package="org.lineageos.settings.device"
+          package="org.aosip.settings.device"
           android:versionCode="1"
           android:versionName="1.0" >
 
@@ -22,7 +22,7 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
-    <protected-broadcast android:name="org.lineageos.settings.device.UPDATE_SETTINGS" />
+    <protected-broadcast android:name="org.aosip.settings.device.UPDATE_SETTINGS" />
 
     <uses-sdk
         android:minSdkVersion="28"
@@ -60,7 +60,7 @@
 
         <!-- Quick Settings Tiles -->
         <service
-            android:name="org.lineageos.settings.device.DCModeTileService"
+            android:name="org.aosip.settings.device.DCModeTileService"
             android:icon="@drawable/ic_dc_tile"
             android:label="@string/tile_dc_mode"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -70,7 +70,7 @@
             </intent-filter>
         </service>
         <service
-            android:name="org.lineageos.settings.device.HBMModeTileService"
+            android:name="org.aosip.settings.device.HBMModeTileService"
             android:icon="@drawable/ic_hbm_tile"
             android:label="@string/tile_hbm_mode"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -80,7 +80,7 @@
             </intent-filter>
         </service>
         <service
-            android:name="org.lineageos.settings.device.SRGBModeTileService"
+            android:name="org.aosip.settings.device.SRGBModeTileService"
             android:icon="@drawable/ic_srgb_tile"
             android:label="@string/tile_srgb_mode"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -90,7 +90,7 @@
             </intent-filter>
         </service>
         <service
-            android:name="org.lineageos.settings.device.OtgToggleService"
+            android:name="org.aosip.settings.device.OtgToggleService"
             android:icon="@drawable/ic_otg_tile"
             android:label="@string/tile_otg_mode"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -100,7 +100,7 @@
             </intent-filter>
         </service>
         <service
-            android:name="org.lineageos.settings.device.GameModeTileService"
+            android:name="org.aosip.settings.device.GameModeTileService"
             android:icon="@drawable/ic_game_tile"
             android:label="@string/tile_game_mode"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">

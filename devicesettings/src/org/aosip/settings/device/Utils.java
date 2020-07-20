@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.lineageos.settings.device;
+package org.aosip.settings.device;
 
 import android.content.res.Resources;
 import android.util.Log;
