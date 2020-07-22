@@ -80,8 +80,7 @@ public class DozeService extends Service {
                 DozeUtils.isRaiseToWakeEnabled(this)) {
             mPickupSensor.disable();
         }
-        if (DozeUtils.isHandwaveGestureEnabled(this) ||
-                DozeUtils.isPocketGestureEnabled(this)) {
+        if (DozeUtils.isPocketGestureEnabled(this)) {
             mProximitySensor.disable();
         }
     }
@@ -92,8 +91,7 @@ public class DozeService extends Service {
                 DozeUtils.isRaiseToWakeEnabled(this)) {
             mPickupSensor.enable();
         }
-        if (DozeUtils.isHandwaveGestureEnabled(this) ||
-                DozeUtils.isPocketGestureEnabled(this)) {
+        if (DozeUtils.isPocketGestureEnabled(this)) {
             mProximitySensor.enable();
         }
     }
