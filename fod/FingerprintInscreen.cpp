@@ -26,6 +26,7 @@
 /* Hardcoded stuffs */
 #define FP_PRESS_PATH "/sys/kernel/oppo_display/notify_fppress"
 #define DIMLAYER_PATH "/sys/kernel/oppo_display/dimlayer_hbm"
+#define DC_DIM_PATH "/sys/kernel/oppo_display/dimlayer_bl_en"
 #define NOTIFY_BLANK_PATH "/sys/kernel/oppo_display/notify_panel_blank"
 #define AOD_MODE_PATH "/sys/kernel/oppo_display/aod_light_mode_set"
 #define DOZE_STATUS "/proc/touchpanel/DOZE_STATUS"
@@ -63,7 +64,7 @@ namespace inscreen {
 namespace V1_0 {
 namespace implementation {
 
-FingerprintInscreen::FingerprintInscreen():mFingerPressed{false} {
+FingerprintInscreen::FingerprintInscreen():mFingerPressed{false}, isDcDimEnabled{0} {
     this->mFodCircleVisible = false;
 }
 
@@ -107,6 +108,10 @@ Return<void> FingerprintInscreen::onRelease() {
 }
 
 Return<void> FingerprintInscreen::onShowFODView() {
+    // Disable DC DIM on FingerprintView like stock.
+    isDcDimEnabled = get(DC_DIM_PATH, FP_ENDIT);
+    if(isDcDimEnabled)
+        set(DC_DIM_PATH, FP_BEGIN);
     this->mFodCircleVisible = true;
     if(get(DOZE_STATUS, FP_ENDIT)) {
     set(NOTIFY_BLANK_PATH, FP_BEGIN);
@@ -117,6 +122,7 @@ Return<void> FingerprintInscreen::onShowFODView() {
 
 Return<void> FingerprintInscreen::onHideFODView() {
     this->mFodCircleVisible = false;
+    set(DC_DIM_PATH, isDcDimEnabled);
     set(FP_PRESS_PATH, FP_ENDIT);
     set(DIMLAYER_PATH, FP_ENDIT);
 
