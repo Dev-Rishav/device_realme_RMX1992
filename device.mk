@@ -382,6 +382,7 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.safailnet.rc \
     init.target.rc \
+    init.artemis.rc \
     ueventd.rc
 
 # RCS
