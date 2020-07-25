@@ -15,7 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/derp_x2.mk
+    $(LOCAL_DIR)/syberia_x2.mk
 
 COMMON_LUNCH_CHOICES := \
-    derp_x2-userdebug
+    syberia_x2-userdebug \
+    syberia_x2-eng \
+    syberia_x2-user
