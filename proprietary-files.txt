@@ -923,6 +923,8 @@ vendor/firmware/tp/19771/LIMIT_S3706_SAMSUNG.img
 
 # ufs-Firmware
 vendor/firmware/ufs/move_target_ufs_fw_to_opporeserve1.sh
+vendor/firmware/ufs/SKhynix-H9HQ53ACPMMDAR.bin
+vendor/firmware/ufs/SKhynix-H9HQ53AECMMDAR.bin
 
 # FM
 lib/fm_helium.so
@@ -1444,6 +1446,7 @@ vendor/lib/libpn557_fw.so
 vendor/lib/nfc_nci.nqx.default.hw.so
 vendor/lib64/android.hardware.secure_element@1.0-impl.so
 vendor/lib64/nfc_nci.nqx.default.hw.so
+vendor/lib64/ls_nq_client.so
 vendor/lib64/se_nq_extn_client.so
 vendor/lib64/vendor.nxp.hardware.nfc@1.0.so
 vendor/lib64/vendor.nxp.hardware.nfc@1.1.so
