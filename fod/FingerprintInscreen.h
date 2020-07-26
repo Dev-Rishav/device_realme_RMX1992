@@ -52,7 +52,7 @@ public:
 
 private:
     bool mFodCircleVisible;
-    bool mFingerPressed;
+    bool isDreamState;
     int isDcDimEnabled;
     std::mutex mCallbackLock;
     sp<IFingerprintInscreenCallback> mCallback;
