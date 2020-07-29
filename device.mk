@@ -181,8 +181,7 @@ PRODUCT_PACKAGES += \
 
 # Doze
 PRODUCT_PACKAGES += \
-    RealmeDoze \
-    devicesettings
+    RealmeDoze
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -207,7 +206,7 @@ PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor
 
- GPS
+#GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@2.0-impl-qti \
     android.hardware.gnss@2.0-service-qti \
