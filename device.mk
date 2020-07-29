@@ -465,3 +465,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+# libqti_vndfwk_detect
+PRODUCT_PACKAGES += \
+    libqti_vndfwk_detect
